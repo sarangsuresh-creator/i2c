@@ -20,12 +20,10 @@ void main(void) {
     while(1){
          if(SSPSTAT & 0X08){
         SSPOV = 0;
-        //data =SSPBUF;
+        data =SSPBUF;
     }
       
         if(CKP==0){
-            //string("sarang");
-            //CKP = 0;
             if(SSPSTAT & 0X04){
                 char dummy = SSPBUF;
                 SSPBUF = 40 + i++;
