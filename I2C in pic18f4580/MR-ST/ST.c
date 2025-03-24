@@ -44,18 +44,4 @@ void main(void) {
 
     return;
 }
-// string(const char *s){
-//    while(*s){
-//        data(*s++);
-//    }
-//}
-//void data(const char d){
-//if(SSPSTAT & 0X04){
-//                char dummy = SSPBUF;
-//                SSPBUF = 's';
-//                while(!BF);
-//                CKP =1;
-//                
-//                SSPIF = 0;
-//            }
-//}
+
