@@ -20,7 +20,7 @@ void main(void) {
     while(1){
          if(SSPSTAT & 0X08){
         SSPOV = 0;
-        data =SSPBUF;
+       int data =SSPBUF;
     }
       
         if(CKP==0){
@@ -42,4 +42,3 @@ void main(void) {
 
     return;
 }
-
