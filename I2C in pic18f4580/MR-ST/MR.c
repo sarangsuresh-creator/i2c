@@ -55,8 +55,8 @@ while(PEN==1);//
 }
 void I2C_SEND_DATA(char a)
 {
-SSPIF=0;
 SSPBUF=a;
+SSPIF=0;
 while(SSPIF==0);
 }
 char I2C_READ_DATA(char a)
@@ -67,8 +67,10 @@ while(!BF);
 mychar = SSPBUF;
 while(BF);
 ACKDT=a;//1- NACK before stopping 0->ack
+SSPIF = 0;	
 ACKEN=1;
 while(ACKEN);
+SSPIF = 0;	
 return mychar;
 }
 void TRANSMIT_CHAR(char b)
