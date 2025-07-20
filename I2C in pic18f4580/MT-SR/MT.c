@@ -43,8 +43,9 @@ while(PEN==1);//
 }
 void I2C_SEND_DATA(const char a)
 {
-SSPIF=0;
 SSPBUF=a;
+SSPIF=0;
+
 while(SSPIF==0);
 }
 void string(const char *s){
@@ -53,12 +54,4 @@ void string(const char *s){
      I2C_SEND_DATA(*s++);   
     }
 }
-//char I2C_READ_DATA(char a)
-//{
-//RCEN=1;//receive
-//while(RCEN);//
-//ACKDT=a;//1- NACK before stopping 0->ack
-//ACKEN=1;
-//while(ACKEN);
-//return SSPBUF;
-//}
+
