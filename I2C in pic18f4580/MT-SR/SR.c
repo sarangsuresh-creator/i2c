@@ -24,7 +24,7 @@ while(1){
         CKP = 0;
         if(!(SSPSTAT & 0x04)){
           data = SSPBUF;
-          while(!BF);
+          while(BF);
           
           SSPIF =0;
         }
