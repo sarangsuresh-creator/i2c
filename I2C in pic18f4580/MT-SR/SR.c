@@ -16,10 +16,7 @@ SSPADD = 0xd0;
 
 
 while(1){
-    if(SSPSTAT & 0X08){
-        SSPOV = 0;
-        data =SSPBUF;
-    }
+   
     if(SSPIF){
         CKP = 0;
         if(!(SSPSTAT & 0x04)){
