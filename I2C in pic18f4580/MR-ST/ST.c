@@ -18,10 +18,6 @@ void main(void) {
     SSPCON2 = 0x01;
     TRISC = 0xff;
     while(1){
-         if(SSPSTAT & 0X08){
-        SSPOV = 0;
-       int data =SSPBUF;
-    }
       
         if(CKP==0){
             if(SSPSTAT & 0X04){
