@@ -31,7 +31,7 @@ void main(void) {
                 
                 
                 
-               // __delay_ms(5);
+                __delay_ms(100);
             }
         }
     }
