@@ -35,8 +35,9 @@ while(1){
    }
 }
 void my_char(char d){
-    TXREG = d;
-    while(!TXIF);
+      while(!TXIF); 
+  TXREG = d;
+
     TXIF = 0;
 }
 
