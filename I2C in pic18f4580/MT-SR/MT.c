@@ -17,7 +17,7 @@ while(1){
 _I2C_START();//start slave ad+R/w  
 for(long i=0;i<100000;i++);//delay
 I2C_SEND_DATA(0xd0);//1101 000 0
-string("hello world\n\r");
+string("hello world\r\n");
 _I2C_STOP(); 
 
 
